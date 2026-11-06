@@ -36,7 +36,7 @@ ul, ol { margin: 0; }
 .menu-toggle { display: none; color: var(--text); background: none; border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px; }
 .hero { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: 45px; padding-top: 75px; padding-bottom: 75px; }
 .eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; color: var(--accent); font-size: 12px; font-weight: bold; letter-spacing: .12em; text-transform: uppercase; }
-.status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 14px #baa5ff70; }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 14px #baa5ff70; animation: signal-pulse 2.5s ease-in-out infinite; }
 h1 { font-size: clamp(44px, 5.4vw, 76px); font-weight: 700; letter-spacing: -.055em; }
 h1 em { font-style: normal; color: var(--accent); }
 .hero-description { max-width: 455px; margin-top: 26px; margin-bottom: 30px; color: var(--muted); font-size: 17px; }
@@ -47,10 +47,10 @@ h1 em { font-style: normal; color: var(--accent); }
 .hero-visual { min-width: 0; }
 .record-frame { position: relative; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
 .record-frame::before { content: "01 / FIRST PLAY"; position: absolute; top: 20px; left: 22px; color: var(--muted); font-size: 10px; letter-spacing: .14em; }
-.record-art { width: 100%; margin: 20px 0; animation: record-turn 60s linear infinite; }
+.record-art { width: 100%; margin: 20px 0; will-change: transform; }
 .record-caption { position: absolute; right: 22px; bottom: 18px; color: var(--muted); font-size: 10px; letter-spacing: .15em; }
 .hero-visual figcaption { margin-top: 16px; color: var(--muted); font-size: 12px; text-align: right; }
-@keyframes record-turn { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes signal-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
 .platforms { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .platforms-inner { display: flex; align-items: center; justify-content: space-between; gap: 35px; padding-block: 27px; }
 .platforms p { color: var(--muted); font-size: 12px; line-height: 1.7; }
