@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <radialGradient id="vinyl"><stop stop-color="#292a32"/><stop offset=".45" stop-color="#08090c"/><stop offset=".76" stop-color="#26262e"/><stop offset="1" stop-color="#0a0b0e"/></radialGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d4c7ff" stop-opacity=".19"/><stop offset=".5" stop-color="#17171e" stop-opacity="0"/><stop offset="1" stop-color="#d4c7ff" stop-opacity=".13"/></linearGradient>
+  </defs>
+  <circle cx="250" cy="250" r="236" fill="url(#vinyl)" stroke="#45444f"/>
+  <g fill="none" stroke="#58555f" stroke-width=".7" opacity=".42">
+    <circle cx="250" cy="250" r="225"/><circle cx="250" cy="250" r="215"/>
+    <circle cx="250" cy="250" r="205"/><circle cx="250" cy="250" r="195"/>
+    <circle cx="250" cy="250" r="185"/><circle cx="250" cy="250" r="175"/>
+    <circle cx="250" cy="250" r="165"/><circle cx="250" cy="250" r="155"/>
+    <circle cx="250" cy="250" r="145"/><circle cx="250" cy="250" r="135"/>
+    <circle cx="250" cy="250" r="125"/>
+  </g>
+  <circle cx="250" cy="250" r="236" fill="url(#shine)"/>
+  <circle cx="250" cy="250" r="106" fill="#baa5ff"/>
+  <circle cx="250" cy="250" r="94" fill="none" stroke="#111215" stroke-opacity=".23"/>
+  <text x="250" y="222" text-anchor="middle" fill="#111215" font-family="Arial,sans-serif" font-size="36" font-weight="bold" letter-spacing="-1">SQWIN</text>
+  <text x="250" y="243" text-anchor="middle" fill="#111215" font-family="Arial,sans-serif" font-size="9" letter-spacing="3">PRODUCTION</text>
+  <circle cx="250" cy="266" r="6" fill="#111215"/>
+  <path d="M201 302v-8m8 13v-20m8 28v-36m8 26v-16m8 34v-52m8 40v-28m8 46v-64m8 45v-26m8 35v-44m8 34v-22m8 30v-38m8 26v-14m8 20v-26" fill="none" stroke="#111215" stroke-width="3"/>
+</svg>
