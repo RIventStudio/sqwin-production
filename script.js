@@ -1,5 +1,24 @@
 document.documentElement.classList.add('js-enabled');
 
+const record = document.querySelector('.record-art');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let rotationScheduled = false;
+
+function rotateRecord() {
+  // Прокрутка вниз крутит пластинку вперёд, вверх — назад.
+  record.style.transform = reducedMotion.matches ? 'none' : `rotate(${window.scrollY * 0.25}deg)`;
+  rotationScheduled = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!rotationScheduled) {
+    rotationScheduled = true;
+    requestAnimationFrame(rotateRecord);
+  }
+}, { passive: true });
+reducedMotion.addEventListener('change', rotateRecord);
+rotateRecord();
+
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#main-nav');
 
